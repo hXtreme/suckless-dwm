@@ -1,13 +1,13 @@
 /* See LICENSE file for copyright and license details. */
 
 /* appearance */
-static const unsigned int borderpx  = 1;        /* border pixel of windows */
+static const unsigned int borderpx  = 0;        /* border pixel of windows */
 static const Gap default_gap        = {.isgap = 1, .realgap = 10, .gappx = 10};
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "TerminessTTF Nerd Font:size=10" };
+static const char *fonts[]          = { "TerminessTTF Nerd Font:size=10", "Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true" };
 static const char dmenufont[]       = "TerminessTTF Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
@@ -32,6 +32,7 @@ static const Rule rules[] = {
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
 	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
 	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
+	{ "st",      "f-st",   NULL,           0,         1,          1,          -1,        -1 },
 	{ "konsole", NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ NULL,      NULL,     "Event Tester", 0,         1,          0,           1,        -1 }, /* xev */
 	{ NULL,      NULL,     "clearine",     0,         1,          0,           1,        -1 }, /* logout */
@@ -66,7 +67,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-b", NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-b", "-p", " >", "-c", "-g", "3", NULL };
 static const char *termcmd[]  = { "st", NULL };
 
 static Key keys[] = {
