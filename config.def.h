@@ -7,7 +7,10 @@ static const unsigned int snap      = 32;       /* snap pixel */
 static const int swallowfloating    = 0;        /* 1 means swallow floating windows by default */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 0;        /* 0 means bottom bar */
-static const char *fonts[]          = { "TerminessTTF Nerd Font:size=10", "Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true" };
+static const char *fonts[]          = {
+	"Hack Nerd Font Mono:pixelsize=12:antialias=true:autohint=true",
+	"JoyPixels:pixelsize=12:antialias=true:autohint=true",
+};
 static const char dmenufont[]       = "TerminessTTF Nerd Font:size=10";
 static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
