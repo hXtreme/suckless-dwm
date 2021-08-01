@@ -33,7 +33,8 @@ static const Rule rules[] = {
 	 */
 	/* class     instance  title           tags mask  isfloating  isterminal  noswallow  monitor */
 	{ "Gimp",    NULL,     NULL,           0,         1,          0,           0,        -1 },
-	{ "Firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "firefox", NULL,     NULL,           1 << 8,    0,          0,          -1,        -1 },
+	{ "Slack",   "slack",  NULL,           1 << 3,    0,          0,          -1,        -1 },
 	{ "st",      NULL,     NULL,           0,         0,          1,          -1,        -1 },
 	{ "st",      "f-st",   NULL,           0,         1,          1,          -1,        -1 },
 	{ "Zathura", NULL,     NULL,           0,         0,          0,           1,        -1 }, /* zathura */
